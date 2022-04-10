@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PamAuthenticator", "PamAuth
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D14A98B9-6CBB-4D2D-8ABF-EAB1A8FC2E58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PamAuthenticatorTests", "PamAuthenticatorTests\PamAuthenticatorTests.csproj", "{0219449E-092D-4B02-8042-2F557221E146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,18 @@ Global
 		{021EC7C4-F936-4214-B395-62EB127DB5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021EC7C4-F936-4214-B395-62EB127DB5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021EC7C4-F936-4214-B395-62EB127DB5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0219449E-092D-4B02-8042-2F557221E146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0219449E-092D-4B02-8042-2F557221E146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0219449E-092D-4B02-8042-2F557221E146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0219449E-092D-4B02-8042-2F557221E146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {617E3FD3-4B0B-4E2E-8C1E-C1DD4E07A148}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0219449E-092D-4B02-8042-2F557221E146} = {D14A98B9-6CBB-4D2D-8ABF-EAB1A8FC2E58}
 	EndGlobalSection
 EndGlobal

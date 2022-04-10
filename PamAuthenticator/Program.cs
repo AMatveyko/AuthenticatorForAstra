@@ -1,2 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+using PamAuthenticator;
+
+var authenticator = new Authenticator(args);
+var result = authenticator.CheckCredentials();
+
+Console.Write(result);
