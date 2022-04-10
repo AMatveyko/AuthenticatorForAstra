@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using PamAuthenticator;
+using PamAuthenticator.ArgumentsWorkers;
 using PamAuthenticator.DTO;
 
 namespace PamAuthenticatorTests;
@@ -15,7 +16,7 @@ public sealed class ConsoleArgumentsParserTests
         };
 
         var expected = new Arguments {
-            Type = "auth",
+            PamType = "auth",
             Username = "administrator",
             Password = "administrator"
         };

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using PamAuthenticator;
+using PamAuthenticator.ArgumentsWorkers;
 using PamAuthenticator.DTO;
 
 namespace PamAuthenticatorTests;
@@ -9,7 +10,7 @@ internal sealed class ConsoleArgumentsValidatorTests
     [Test]
     public void ValidDataTest() {
         var arguments = new Arguments {
-            Type = "auth",
+            PamType = "auth",
             Username = "username",
             Password = "password"
         };
@@ -20,7 +21,7 @@ internal sealed class ConsoleArgumentsValidatorTests
     [Test]
     public void InvalidTypeTest() {
         var arguments = new Arguments {
-            Type = "type",
+            PamType = "type",
             Username = "username",
             Password = "password"
         };
@@ -31,7 +32,7 @@ internal sealed class ConsoleArgumentsValidatorTests
     [Test]
     public void InvalidUsernameTest() {
         var arguments = new Arguments {
-            Type = "type",
+            PamType = "type",
             Password = "password"
         };
 
@@ -41,7 +42,7 @@ internal sealed class ConsoleArgumentsValidatorTests
     [Test]
     public void InvalidPasswordTest() {
         var arguments = new Arguments {
-            Type = "type",
+            PamType = "type",
             Username = "username",
             Password = ""
         };

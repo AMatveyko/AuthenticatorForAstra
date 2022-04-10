@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
-using PamAuthenticator.DTO;
 
-namespace PamAuthenticator;
+namespace PamAuthenticator.ArgumentsWorkers;
 
 internal static class ConsoleArgumentsValidator
 {
-    public static void Validate(Arguments arguments) => ValidateObject(arguments);
+    public static void Validate(DTO.Arguments arguments) => ValidateObject(arguments);
 
     private static void ValidateObject(IValidatableObject obj) {
         var results = new List<ValidationResult>();

@@ -2,7 +2,5 @@
 
 using PamAuthenticator;
 
-var authenticator = new Authenticator(args);
-var result = authenticator.CheckCredentials();
-
-Console.Write(result);
+var worker = new Worker(args, null);
+ExceptionsLogger.Log(worker.Run);

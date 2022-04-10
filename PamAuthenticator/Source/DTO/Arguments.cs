@@ -4,7 +4,8 @@ namespace PamAuthenticator.DTO;
 
 internal record Arguments : IValidatableObject
 {
-    public string Type { get; set; }
+    public string AuthenticationType { get; set; }
+    public string PamType { get; set; }
     public string Username { get; set; }
     public string Password { get; set; }
     
@@ -12,8 +13,8 @@ internal record Arguments : IValidatableObject
 
         var errors = new List<ValidationResult>();
         
-        if (MyConstants.PamFunctions.Contains(Type) == false) {
-            errors.Add(new ValidationResult($"Unsupported pam function {Type}"));
+        if (MyConstants.PamFunctions.Contains(PamType) == false) {
+            errors.Add(new ValidationResult($"Unsupported pam function {PamType}"));
         }
         
         CheckForNull(errors, Username, nameof(Username));
