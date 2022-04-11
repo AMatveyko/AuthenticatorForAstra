@@ -2,16 +2,17 @@
 {
     internal static class ConsoleArgumentsParser
     {
-        public static DTO.Arguments Parse(string[] args) {
-            if (args.Length < 3) {
-                throw new ArgumentOutOfRangeException("Console arguments are less than 3");
-            }
 
-            return new() {
-                PamType = args[0],
-                Username = args[1],
-                Password = args[2]
-            };
-        }
+        private const int ArgumentsCount = 4;
+        
+        public static DTO.Arguments Parse(string[] args) =>
+            args.Length < ArgumentsCount
+                ? throw new ArgumentOutOfRangeException($"Console arguments are less than {ArgumentsCount}")
+                : new() {
+                        AuthenticationType = args[0],
+                        PamType = args[1],
+                        Username = args[2],
+                        Password = args[3]
+                    };
     }
 }
