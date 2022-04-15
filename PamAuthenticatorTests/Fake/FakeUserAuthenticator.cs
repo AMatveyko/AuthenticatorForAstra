@@ -11,12 +11,14 @@ public sealed class FakeUserAuthenticator : IUserAuthenticator
 
     public FakeUserAuthenticator(string secret) => _secret = secret;
     
-    public bool IsValidCredentials(Credentials credentials) {
+    public Answer VerifyingCredentials(Credentials credentials) {
         var username = "administrator";
         var password = "administrator";
+        var timestamp = TimeStampHelper.GetTimeStamp();
 
-        var info = SignatureCreator.Create(password, _secret);
+        var info = SignatureCreator.Create(password, _secret, timestamp);
 
-        return info.Signature == credentials.PasswordSignature && credentials.Username == username;
+        return new Answer();
+        
     }
 }

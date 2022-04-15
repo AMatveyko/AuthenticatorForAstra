@@ -13,7 +13,8 @@ internal sealed class CredentialsCreator
         (_arguments, _secret) = (arguments, secret);
 
     public Credentials Crete() {
-        var signatureInfo = SignatureCreator.Create(_arguments.Password, _secret);
+        var timestamp = TimeStampHelper.GetTimeStamp();
+        var signatureInfo = SignatureCreator.Create(_arguments.Password, _secret, timestamp);
         return new() {
             Username = _arguments.Username,
             PasswordSignature = signatureInfo.Signature,

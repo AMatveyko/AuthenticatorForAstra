@@ -4,5 +4,5 @@ namespace UserServiceInterface;
 
 public interface IAuthenticator
 {
-    bool IsValidCredentials(Credentials credentials);
+    Answer VerifyingCredentials(Credentials credentials);
 }
