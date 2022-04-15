@@ -12,7 +12,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\AccountManagerClient\AccountManagerClient.csproj" />
       <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\PamAuthenticator\PamAuthenticator.csproj" />
+      <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
     </ItemGroup>
 
 </Project>

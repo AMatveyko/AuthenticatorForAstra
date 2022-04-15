@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationTests", "Autho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManager", "AccountManager\AccountManager.csproj", "{90017FB9-16F3-4A44-9F26-B0C60995FFDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagerClient", "AccountManagerClient\AccountManagerClient.csproj", "{7B03867E-9B85-4ED4-B40C-25AB6FBF4A70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{90017FB9-16F3-4A44-9F26-B0C60995FFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90017FB9-16F3-4A44-9F26-B0C60995FFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90017FB9-16F3-4A44-9F26-B0C60995FFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B03867E-9B85-4ED4-B40C-25AB6FBF4A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B03867E-9B85-4ED4-B40C-25AB6FBF4A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B03867E-9B85-4ED4-B40C-25AB6FBF4A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B03867E-9B85-4ED4-B40C-25AB6FBF4A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,5 +94,6 @@ Global
 		{4E3CC832-C403-43EB-9AD8-9BDD7DFC188C} = {248208B7-D4C1-4F85-BFDD-4BE2C8F19C66}
 		{AE9B331F-0014-412A-9F3F-B8E4AFA6974D} = {D14A98B9-6CBB-4D2D-8ABF-EAB1A8FC2E58}
 		{90017FB9-16F3-4A44-9F26-B0C60995FFDA} = {D3F756DD-E331-4D8C-890F-BA391CC369A8}
+		{7B03867E-9B85-4ED4-B40C-25AB6FBF4A70} = {59A0EBCC-9242-430D-A875-8FF8E72D4170}
 	EndGlobalSection
 EndGlobal

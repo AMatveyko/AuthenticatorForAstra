@@ -1,7 +1,6 @@
 using System.Security.Authentication;
 using Common;
 using Common.Db;
-using Common.Db.Entities;
 using UserServiceInterface;
 using UserServiceInterface.DTO;
 
@@ -16,13 +15,12 @@ public sealed class Authorizer : IAuthenticator
     public Authorizer(IDataSource data, string secret) =>
         (_data, _secret) = (data, secret);
     
-    public Answer VerifyingCredentials(Credentials credentials) {
-        var userInfo = _data.GetUserInfo(credentials.Username);
-        return TryVerifyingCredentials(credentials, userInfo);
-    }
+    public Answer VerifyingCredentials(Credentials credentials) =>
+        TryVerifyingCredentials(credentials);
 
-    private Answer TryVerifyingCredentials(Credentials credentials, UserInfo userInfo) {
+    private Answer TryVerifyingCredentials(Credentials credentials) {
         try {
+            var userInfo = _data.GetUserInfo(credentials.Username);
             CheckTimeStamp(credentials);
             CheckSignature(credentials, userInfo.Password);
             return new Answer();
