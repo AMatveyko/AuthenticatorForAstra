@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AccountManagerClient\AccountManagerClient.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
   </ItemGroup>

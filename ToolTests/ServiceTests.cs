@@ -12,7 +12,7 @@ public sealed class ServiceTests
         var arguments = new Arguments {
             AuthenticationType = "authentication",
             PamType = "auth",
-            Password = "administrators",
+            Password = "administrator",
             Username = "administrator"
         };
         
@@ -22,7 +22,8 @@ public sealed class ServiceTests
 
         // credentials.TimeStamp = "20210415164646";
         
-        var client = new ManagerClient("http://localhost:5176");
+        //var client = new ManagerClient("http://localhost:5176");
+        var client = new ManagerClient("http://10.0.0.155:5005/");
         var result = client.VerifyingCredentials( credentials );
         
         Console.WriteLine($"IsError = {result.IsError}, Message = {result.Message}");

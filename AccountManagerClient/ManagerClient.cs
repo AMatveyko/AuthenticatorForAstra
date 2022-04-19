@@ -5,7 +5,7 @@ using UserServiceInterface.DTO;
 
 namespace AccountManagerClient;
 
-public sealed class ManagerClient : IAuthenticator
+public sealed class ManagerClient : IUserAuthenticator
 {
 
     private readonly Authorization.AuthorizationClient _client;
