@@ -7,6 +7,7 @@ public sealed class SignatureCreatorTests
 {
     [Test]
     public void CreateTest() {
-        var result = SignatureCreator.Create("test", "secret");
+        var timestamp = TimeStampHelper.GetTimeStamp();
+        var result = SignatureCreator.Create("test", "secret", timestamp);
     }
 }

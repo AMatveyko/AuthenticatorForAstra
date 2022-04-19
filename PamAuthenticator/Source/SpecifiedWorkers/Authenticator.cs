@@ -1,3 +1,4 @@
+using System.Security.Authentication;
 using PamAuthenticator.DTO;
 using PamAuthenticator.Helpers;
 using UserServiceInterface;
@@ -26,6 +27,14 @@ internal sealed class Authenticator : ISpecificWorker
         var helper = new CredentialsCreator(_arguments, _secret);
         return helper.Crete();
     }
-    
-    private bool IsValidCredentials(Credentials credentials) => _authenticator.IsValidCredentials(credentials);
+
+    private bool IsValidCredentials(Credentials credentials) {
+        var result = _authenticator.VerifyingCredentials(credentials);
+
+        if (result.IsError) {
+            throw new AuthenticationException(result.Message);
+        }
+
+        return result.IsError == false;
+    }
 }

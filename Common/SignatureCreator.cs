@@ -5,8 +5,7 @@ namespace Common;
 
 public static class SignatureCreator
 {
-    public static SignatureInfo Create(string value, string secret) {
-        var timeStamp = GetTimeStamp();
+    public static SignatureInfo Create(string value, string secret, string timeStamp) {
         var rawSignature = CreateRawSignature(value, secret, timeStamp);
         var hash = CreateHash(rawSignature);
         return new() {Signature = hash, TimeStamp = timeStamp};
@@ -21,7 +20,4 @@ public static class SignatureCreator
     
     private static string CreateRawSignature(string value, string secret, string timeStamp) =>
         $"{secret}{value}{timeStamp}";
-    
-    private static string GetTimeStamp() =>
-        DateTime.UtcNow.ToString("yyyyMMddHHmmss");
 }

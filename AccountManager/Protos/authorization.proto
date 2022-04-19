@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "AccountManager";
+
+package authorization;
+
+service Authorization {
+  rpc VerifyingCredentials (CredentialsGrpc) returns (AnswerGrpc);
+}
+
+message CredentialsGrpc {
+  string Username = 1;
+  string PasswordSignature = 2;
+  string TimeStamp = 3;
+}
+
+message AnswerGrpc {
+  bool IsError = 1;
+  string Message = 2;
+}

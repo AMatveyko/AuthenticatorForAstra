@@ -4,7 +4,15 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>AuthorizationTests</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Authorization\Authorization.csproj" />
+      <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
+      <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
@@ -12,10 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AccountManagerClient\AccountManagerClient.csproj" />
-      <ProjectReference Include="..\Common\Common.csproj" />
-      <ProjectReference Include="..\PamAuthenticator\PamAuthenticator.csproj" />
-      <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
+      <Folder Include="Fakes" />
     </ItemGroup>
 
 </Project>
