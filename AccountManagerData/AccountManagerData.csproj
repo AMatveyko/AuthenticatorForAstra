@@ -7,12 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
-      <PackageReference Include="NUnit" Version="3.13.3" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\PamAuthenticator\PamAuthenticator.csproj" />
+      <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
+      <ProjectReference Include="..\Irbis64Plus\Irbis64Plus.csproj" />
     </ItemGroup>
 
 </Project>

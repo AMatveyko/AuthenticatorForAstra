@@ -1,6 +1,7 @@
+using Common.Db;
 using Common.Db.Entities;
 
-namespace Common.Db;
+namespace AccountManagerData.Databases;
 
 public class TestDatabase : IDataSource
 {

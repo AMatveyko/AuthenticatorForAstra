@@ -10,9 +10,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="deleted the excess">
-      <change afterPath="$PROJECT_DIR$/scripts/authenticator.sh" afterDir="false" />
+    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="script for pam_exec">
+      <change afterPath="$PROJECT_DIR$/AccountManagerData/Source/DatabaseConnectionInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccountManagerData/Source/Databases/IrbisDatabase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Attributes/FieldNumberAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/DTO/Reader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/IrbisClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticatorForAstra.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticatorForAstra.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationTests/AuthorizationTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationTests/AuthorizationTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationTests/AuthorizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationTests/AuthorizerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common.Db/Source/TestDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerData/Source/Databases/TestDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticatorTests/PamAuthenticatorTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticatorTests/PamAuthenticatorTests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +186,7 @@
       <workItem from="1650022693861" duration="14459000" />
       <workItem from="1650274505175" duration="1584000" />
       <workItem from="1650294617407" duration="9533000" />
-      <workItem from="1650355311620" duration="38271000" />
+      <workItem from="1650355311620" duration="42669000" />
     </task>
     <task id="LOCAL-00001" summary="change projects">
       <created>1649578188248</created>
@@ -240,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650459986419</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="script for pam_exec">
+      <created>1650464300565</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650464300565</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +289,8 @@
     <MESSAGE value="finished user authentication;&#10;added service to doccker;" />
     <MESSAGE value="added accounting;&#10;working version;" />
     <MESSAGE value="deleted the excess" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted the excess" />
+    <MESSAGE value="script for pam_exec" />
+    <option name="LAST_COMMIT_MESSAGE" value="script for pam_exec" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
