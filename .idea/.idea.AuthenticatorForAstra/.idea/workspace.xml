@@ -10,14 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="added accounting;&#10;working version;">
+    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="deleted the excess">
+      <change afterPath="$PROJECT_DIR$/scripts/authenticator.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/PamAuthenticator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/PamAuthenticator.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/SpecifiedWorkers/Accounting.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/SpecifiedWorkers/Authenticator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/SpecifiedWorkers/ISpecificWorker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Worker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/WorkerSelector.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +175,7 @@
       <workItem from="1650022693861" duration="14459000" />
       <workItem from="1650274505175" duration="1584000" />
       <workItem from="1650294617407" duration="9533000" />
-      <workItem from="1650355311620" duration="37291000" />
+      <workItem from="1650355311620" duration="38271000" />
     </task>
     <task id="LOCAL-00001" summary="change projects">
       <created>1649578188248</created>
@@ -238,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650459364437</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="deleted the excess">
+      <created>1650459986419</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650459986419</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +270,8 @@
     <MESSAGE value="client complete" />
     <MESSAGE value="finished user authentication;&#10;added service to doccker;" />
     <MESSAGE value="added accounting;&#10;working version;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added accounting;&#10;working version;" />
+    <MESSAGE value="deleted the excess" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted the excess" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
