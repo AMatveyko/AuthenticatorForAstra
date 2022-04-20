@@ -6,11 +6,9 @@ namespace AccountManager.Services;
 
 public sealed class AuthorizationService : Authorization.AuthorizationBase
 {
-    private readonly ILogger<AuthorizationService> _logger;
     private readonly IAuthenticator _authenticator;
 
-    public AuthorizationService(IAuthenticator authenticator, ILogger<AuthorizationService> logger) =>
-        (_authenticator, _logger) = (authenticator, logger);
+    public AuthorizationService(IAuthenticator authenticator) => _authenticator = authenticator;
 
     public override Task<AnswerGrpc> VerifyingCredentials(CredentialsGrpc request, ServerCallContext context) {
         var credentials = GetCredentials(request);

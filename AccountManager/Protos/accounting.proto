@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "AccountManager";
+
+package accounting;
+
+service Accounting {
+  rpc GetUserData(UserGrpc) returns (UserDataAnswerGrpc);
+}
+
+message UserGrpc{
+  string Name = 1;
+}
+
+message UserDataGrpc {
+  string Name = 1;
+  string Group = 2;
+  string FullName = 3;
+}
+
+message UserDataAnswerGrpc {
+  bool IsError = 1;
+  string Message = 2;
+  UserDataGrpc Data = 3;
+}

@@ -13,7 +13,7 @@ internal sealed class Authenticator : ISpecificWorker
     private readonly IAuthenticator _authenticator;
     private readonly string _secret;
 
-    public Authenticator(DTO.Arguments arguments, IAuthenticator authenticator, string secret) =>
+    public Authenticator(Arguments arguments, IAuthenticator authenticator, string secret) =>
         (_arguments, _authenticator, _secret) = (arguments, authenticator, secret);
     
     public string Do() {

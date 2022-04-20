@@ -7,13 +7,15 @@ namespace PamAuthenticator;
 internal static class Configuration
 {
 
-    public static string GetDebugFilePath() =>
+    public static string GroupsToolPath() => GetConfig()["authenticatorSettings:groupsToolPath"];
+    public static string UsersToolPath() => GetConfig()["authenticatorSettings:usersToolPath"];
+    public static string DebugFilePath() =>
         GetConfig()["authenticatorSettings:debugFilePath"];
     
-    public static string GetSignatureSecret() =>
+    public static string SignatureSecret() =>
         GetConfig()["authenticatorSettings:secret"];
 
-    public static string GetServiceUrl() =>
+    public static string ServiceUrl() =>
         GetConfig()["authenticatorSettings:accountManagerUrl"];
     
     public static NLogLoggingConfiguration GetNlogConfig() {

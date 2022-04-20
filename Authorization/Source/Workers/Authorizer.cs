@@ -1,4 +1,5 @@
 using System.Security.Authentication;
+using Authorization.Source.Helpers;
 using Common;
 using Common.Db;
 using UserServiceInterface;
@@ -14,22 +15,16 @@ public sealed class Authorizer : IAuthenticator
 
     public Authorizer(IDataSource data, string secret) =>
         (_data, _secret) = (data, secret);
-    
-    public Answer VerifyingCredentials(Credentials credentials) =>
-        TryVerifyingCredentials(credentials);
 
-    private Answer TryVerifyingCredentials(Credentials credentials) {
-        try {
-            var userInfo = _data.GetUserInfo(credentials.Username);
-            CheckTimeStamp(credentials);
-            CheckSignature(credentials, userInfo.Password);
-            return new Answer();
-        }
-        catch (Exception e) {
-            return new Answer {IsError = true, Message = e.Message};
-        }
+    public Result VerifyingCredentials(Credentials credentials) =>
+        ResultGetter.Get(() => DoVerifyingCredentials(credentials));
+
+    private void DoVerifyingCredentials(Credentials credentials) {
+        var userInfo = _data.GetUserInfo(credentials.Username);
+        CheckTimeStamp(credentials);
+        CheckSignature(credentials, userInfo.Password);
     }
-    
+
     private static void CheckTimeStamp(Credentials credentials) {
         var dateTime = TimeStampHelper.GetDateTime(credentials.TimeStamp);
         if (dateTime < DateTime.UtcNow.AddSeconds(-10)) {
@@ -42,8 +37,7 @@ public sealed class Authorizer : IAuthenticator
     }
 
     private void CheckSignature(Credentials credentials, string passwordFromBd) {
-        var timeStamp = TimeStampHelper.GetTimeStamp();
-        var signatureInfo = SignatureCreator.Create(passwordFromBd, _secret, timeStamp);
+        var signatureInfo = SignatureCreator.Create(passwordFromBd, _secret, credentials.TimeStamp);
         if (signatureInfo.Signature != credentials.PasswordSignature) {
             throw new AuthenticationException("Invalid password.");
         }

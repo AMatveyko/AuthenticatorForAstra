@@ -42,7 +42,7 @@ public class AuthorizerTests
         Assert.AreEqual(true, actual.IsError);
     }
 
-    private static Answer GetAuthenticationAnswer(Credentials credentials) {
+    private static Result GetAuthenticationAnswer(Credentials credentials) {
         var dataSource = new TestDatabase();
         var authorizer = new Authorizer(dataSource, Secret);
         return authorizer.VerifyingCredentials(credentials);

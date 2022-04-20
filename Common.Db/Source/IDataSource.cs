@@ -4,5 +4,5 @@ namespace Common.Db;
 
 public interface IDataSource
 {
-    UserInfo GetUserInfo(string username);
+    User GetUserInfo(string username);
 }

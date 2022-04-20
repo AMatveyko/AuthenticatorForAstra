@@ -13,7 +13,7 @@ internal sealed class Worker
         (_args, _authenticator) = (args, authenticator);
 
     public void Run() {
-        var secret = Configuration.GetSignatureSecret();
+        var secret = Configuration.SignatureSecret();
         var arguments = CreateAndValidateArguments(_args);
         var worker = WorkerSelector.CreateWorker(arguments, _authenticator, secret);
         DoWork(worker);

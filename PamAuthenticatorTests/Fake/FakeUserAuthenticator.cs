@@ -1,4 +1,5 @@
 using Common;
+using Common.DTO;
 using UserServiceInterface;
 using UserServiceInterface.DTO;
 
@@ -11,14 +12,40 @@ public sealed class FakeUserAuthenticator : IUserAuthenticator
 
     public FakeUserAuthenticator(string secret) => _secret = secret;
     
-    public Answer VerifyingCredentials(Credentials credentials) {
+    public Result VerifyingCredentials(Credentials credentials) {
         var username = "administrator";
         var password = "administrator";
         var timestamp = TimeStampHelper.GetTimeStamp();
 
         var info = SignatureCreator.Create(password, _secret, timestamp);
 
-        return new Answer();
+        return Result.Ok();
         
     }
+
+    public Result<UserData> GetUser(string username) => TryGetUser(username);
+
+    private static Result<UserData> TryGetUser(string username) {
+        try {
+            var data = username switch {
+                "administrator" => new UserData {
+                    Name = "administrator",
+                    FullName = "Admin",
+                    Group = "Admins"
+                },
+                "newUser" => new UserData {
+                    Name = "newUser",
+                    FullName = "User Userovich Testoviy",
+                    Group = "testUsers"
+                },
+                _ => throw new ArgumentException($"User {username} not found")
+            };
+
+            return Result<UserData>.Ok(data);
+        }
+        catch (Exception e) {
+            return Result<UserData>.Fail(e.Message);
+        }
+    }
+        
 }
