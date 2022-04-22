@@ -14,7 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
-    .AddScoped<IDataSource>( s => new TestDatabase())
+    // .AddScoped<IDataSource>( s => new TestRepository())
+    .AddScoped<IDataSource>( s => new IrbisRepository(Configuration.IrbisSettings()))
     .AddScoped<IAuthenticator>( s => new Authorizer(s.GetRequiredService<IDataSource>(), Configuration.SignatureSecret()))
     .AddScoped<IAccounting>( s => new AccountGetter(s.GetRequiredService<IDataSource>(), Configuration.DefaultUserGroup()))
     .AddGrpc();

@@ -43,7 +43,7 @@ public class AuthorizerTests
     }
 
     private static Result GetAuthenticationAnswer(Credentials credentials) {
-        var dataSource = new TestDatabase();
+        var dataSource = new TestRepository();
         var authorizer = new Authorizer(dataSource, Secret);
         return authorizer.VerifyingCredentials(credentials);
     }

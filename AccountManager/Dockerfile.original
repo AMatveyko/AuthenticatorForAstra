@@ -12,8 +12,6 @@ COPY ["Common.Db/Common.Db.csproj", "Common.Db/"]
 COPY ["Authorization/Authorization.csproj", "Authorization/"]
 COPY ["UserServiceInterface/UserServiceInterface.csproj", "UserServiceInterface/"]
 COPY ["Common/Common.csproj", "Common/"]
-COPY ["AccountManagerData/AccountManagerData.csproj", "AccountManagerData/"]
-COPY ["Irbis64Plus/Irbis64Plus.csproj", "Irbis64Plus/"]
 RUN dotnet restore "AccountManager/AccountManager.csproj"
 COPY . .
 WORKDIR "/src/AccountManager"

@@ -3,7 +3,7 @@ using Common.Db.Entities;
 
 namespace AccountManagerData.Databases;
 
-public class TestDatabase : IDataSource
+public class TestRepository : IDataSource
 {
 
     private const string User = "administrator";

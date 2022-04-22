@@ -5,9 +5,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
-
+    
     <ItemGroup>
-      <Folder Include="Source\Internal" />
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>Irbis64PlusTests</_Parameter1>
+        </AssemblyAttribute>
     </ItemGroup>
 
 </Project>
