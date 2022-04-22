@@ -15,9 +15,9 @@ ExceptionsLogger.Log(() => Start(args, debugger), debugger);
 void Start(string[] args, IDebugger debugger) {
 
     var credentials = CreateCredentials(args);
-
-    debugger.Write("args", args);
     
+    
+
     var client = new ManagerClient(Configuration.ServiceUrl());
     var groupCreator = new GroupsCreator(Configuration.GroupsToolPath(), debugger);
     var userCreator = new UserCreator(Configuration.UsersToolPath(), debugger);
@@ -35,5 +35,5 @@ Credentials CreateCredentials(string[] args) {
 
 IDebugger GetDebugger(params string[] args) =>
     args.Length == 5 && args[4] == "debug"
-        ? new Debugger(Configuration.DebugFilePath())
+        ? new Debugger(s => Loggers.Debug().Debug(s) )
         : new EmptyDebugger();

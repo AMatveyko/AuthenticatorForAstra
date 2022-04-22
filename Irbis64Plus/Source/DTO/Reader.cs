@@ -22,6 +22,6 @@ public record Reader
     public string SecondName { get; }
     public string MiddleName { get; }
 
-    private static string GetValue(Dictionary<string, string> values, string fieldNumber) =>
+    private static string GetValue(IReadOnlyDictionary<string, string> values, string fieldNumber) =>
         values.ContainsKey(fieldNumber) ? values[fieldNumber] : string.Empty;
 }
