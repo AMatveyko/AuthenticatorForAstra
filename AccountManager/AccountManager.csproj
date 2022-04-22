@@ -11,6 +11,7 @@
 
     <ItemGroup>
         <Protobuf Include="Protos\authorization.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\accounting.proto" GrpcServices="Server" />
     </ItemGroup>
 
     <ItemGroup>
@@ -19,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\AccountManagerData\AccountManagerData.csproj" />
       <ProjectReference Include="..\Authorization\Authorization.csproj" />
       <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
       <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />

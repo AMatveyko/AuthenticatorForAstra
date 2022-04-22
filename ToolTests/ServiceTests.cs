@@ -2,6 +2,7 @@ using AccountManagerClient;
 using NUnit.Framework;
 using PamAuthenticator.DTO;
 using PamAuthenticator.Helpers;
+using UserServiceInterface;
 
 namespace ToolTests;
 
@@ -12,8 +13,8 @@ public sealed class ServiceTests
         var arguments = new Arguments {
             AuthenticationType = "authentication",
             PamType = "auth",
-            Password = "administrator",
-            Username = "administrator"
+            Password = "testuser101",
+            Username = "testuser101"
         };
         
         
@@ -23,9 +24,18 @@ public sealed class ServiceTests
         // credentials.TimeStamp = "20210415164646";
         
         //var client = new ManagerClient("http://localhost:5176");
-        var client = new ManagerClient("http://10.0.0.155:5005/");
+        var client = CreateClient();
         var result = client.VerifyingCredentials( credentials );
         
-        Console.WriteLine($"IsError = {result.IsError}, Message = {result.Message}");
+        Console.WriteLine(result.ToString());
     }
+
+    [Test]
+    public void GrpcAccountingClientTest() {
+        var client = CreateClient();
+        var result = new[] {"administrator", "user"}.Select(client.GetUser).ToList();
+    }
+    
+    private static ManagerClient CreateClient() => new ("http://10.0.0.155:5005/");
+    // private static ManagerClient CreateClient() => new ("http://10.0.0.106:5005/");
 }

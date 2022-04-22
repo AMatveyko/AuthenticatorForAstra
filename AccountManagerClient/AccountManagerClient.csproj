@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <Protobuf Include="..\AccountManager\Protos\authorization.proto" GrpcServices="Client" Link="Protos\authorization.proto" />
+        <Protobuf Include="..\AccountManager\Protos\accounting.proto" GrpcServices="Client" Link="Protos\accounting.proto" />
     </ItemGroup>
 
     <ItemGroup>

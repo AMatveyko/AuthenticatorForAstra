@@ -10,23 +10,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Common/Debugger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/EmptyDebugger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/IDebugger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PamAuthenticator/IWorker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/UnixUsersChecker.cs" afterDir="false" />
+    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="refactoring;&#10;started the implementation of work with the Irbis;">
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/DTO/LoginInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/DTO/SearchResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Exceptions/ServerException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/ConnectionBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/DataHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/PacketsConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/RequestBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/ResponseBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/ResponseHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Helpers/SequenceNumberGetter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Internal/Connection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Internal/Errors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Internal/Request.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64Plus/Source/Internal/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64PlusTests/ConnectionTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Irbis64PlusTests/IrbisClientTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AccountManager/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManagerClient/ManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerClient/ManagerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common.Db/Source/TestDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Db/Source/TestDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/PamAuthenticator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/PamAuthenticator.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManagerData/Source/DatabaseConnectionInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerData/Source/DatabaseConnectionInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManagerData/Source/Databases/IrbisDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerData/Source/Databases/IrbisRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManagerData/Source/Databases/TestDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerData/Source/Databases/TestRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticatorForAstra.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticatorForAstra.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationTests/AuthorizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationTests/AuthorizerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Irbis64Plus/Irbis64Plus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Irbis64Plus/Irbis64Plus.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Irbis64Plus/Source/DTO/Reader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Irbis64Plus/Source/DTO/Reader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Irbis64Plus/Source/IrbisClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Irbis64Plus/Source/IrbisClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="authorizer-sirvice" />
       </map>
     </option>
   </component>
@@ -53,14 +67,19 @@
     <setting file="file://$USER_HOME$/.nuget/packages/nlog.config/4.7.15/contentFiles/any/any/NLog.config" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Authorization/Source/Workers/Authorizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3839fc8fee5ae62538a4469ed86bbba1ccd15d4e0da63bba779abe1719da3/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/412968a6047baa8d45f1c12c664d1a9b57db12a345b7826258a91dc9be4fab/ProtoPreconditions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/974fa14c57bab8fe29f1bddd39b1a6548b9cc8cf9e0ef5e670c2407a56d9/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf95a2cbc284749e32a5e5bd1429f13a4287555cf44cd2f92de32ef7e72fe35/ArgumentNullException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/asneg/source/repos/AuthenticatorForAstra/Authorization/Source/Workers/Authorizer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9af5f84a8561747a6cce84bdc4c6266bc836784bce25212d19e1e5a4a0aa/MD5.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b3f96aa726fca44980c0285de8f1bd49d05d011855ac8334510cee859fb717c/Assert.Conditions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e7e231682be8652744726acc6de35323daa68061429db55e0c251114902f60/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9155dc0b53b8e3cb56faaa451cc190e5a413bfea96c35c2e4fa73350e2605d/Assert.Comparisons.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c1dd833e1c3b867920d1248f993b6cc3f4be2881fb202ce7735eccf82fe3/Socket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/79264171a43466571cc92be2dc7e9ef0ed2be8eaba189dcd163ce20f8d5/Assert.Equality.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/48c3d3e27a3992b5816511af754196140ae50726131f3e6f6bdbf4a339e8364/Assert.Exceptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -82,7 +101,7 @@
     <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Docker.AccountManager">
+  <component name="RunManager" selected=".NET Launch Settings Profile.AuhorizationService">
     <configuration name="PamAuthenticator" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -187,7 +206,7 @@
       <workItem from="1650022693861" duration="14459000" />
       <workItem from="1650274505175" duration="1584000" />
       <workItem from="1650294617407" duration="9533000" />
-      <workItem from="1650355311620" duration="4959000" />
+      <workItem from="1650355311620" duration="72862000" />
     </task>
     <task id="LOCAL-00001" summary="change projects">
       <created>1649578188248</created>
@@ -231,7 +250,42 @@
       <option name="project" value="LOCAL" />
       <updated>1650037803362</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="finished user authentication;&#10;added service to doccker;">
+      <created>1650360332645</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650360332646</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added accounting;&#10;working version;">
+      <created>1650459364437</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650459364437</updated>
+    </task>
+    <task id="LOCAL-00009" summary="deleted the excess">
+      <created>1650459986419</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650459986419</updated>
+    </task>
+    <task id="LOCAL-00010" summary="script for pam_exec">
+      <created>1650464300565</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650464300565</updated>
+    </task>
+    <task id="LOCAL-00011" summary="refactoring;&#10;started the implementation of work with the Irbis;">
+      <created>1650469780410</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650469780410</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,14 +313,19 @@
     <MESSAGE value="added logging to the authorizer client" />
     <MESSAGE value="added to the implementation of the authorization service" />
     <MESSAGE value="client complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="client complete" />
+    <MESSAGE value="finished user authentication;&#10;added service to doccker;" />
+    <MESSAGE value="added accounting;&#10;working version;" />
+    <MESSAGE value="deleted the excess" />
+    <MESSAGE value="script for pam_exec" />
+    <MESSAGE value="refactoring;&#10;started the implementation of work with the Irbis;" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring;&#10;started the implementation of work with the Irbis;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs</url>
-          <line>19</line>
+          <line>21</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Source\ExceptionsLogger.cs" initialLine="9" containingFunctionPresentation="method 'Log'">
             <startOffsets>
               <option value="-1" />
@@ -292,68 +351,94 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs</url>
-          <line>16</line>
+          <line>17</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Source\ExceptionsLogger.cs" initialLine="16" containingFunctionPresentation="method 'Log'">
             <startOffsets>
-              <option value="367" />
+              <option value="401" />
             </startOffsets>
             <endOffsets>
-              <option value="376" />
+              <option value="410" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs</url>
-          <line>11</line>
+          <line>12</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Source\ExceptionsLogger.cs" initialLine="11" containingFunctionPresentation="constructor 'ExceptionsLogger'">
             <startOffsets>
-              <option value="238" />
+              <option value="252" />
             </startOffsets>
             <endOffsets>
-              <option value="285" />
+              <option value="299" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs</url>
-          <line>21</line>
+          <line>23</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Source\Configuration.cs" initialLine="14" containingFunctionPresentation="method 'GetNlogConfig'">
             <startOffsets>
-              <option value="672" />
+              <option value="857" />
             </startOffsets>
             <endOffsets>
-              <option value="680" />
+              <option value="865" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ToolTests/ServiceTests.cs</url>
-          <line>29</line>
+          <line>30</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\ToolTests\ServiceTests.cs" initialLine="22" containingFunctionPresentation="method 'GrpcClientTest'">
             <startOffsets>
-              <option value="918" />
+              <option value="872" />
             </startOffsets>
             <endOffsets>
-              <option value="919" />
+              <option value="873" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PamAuthenticator/Program.cs</url>
-          <line>10</line>
-          <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Program.cs" initialLine="13" containingFunctionPresentation="">
+          <url>file://$PROJECT_DIR$/ToolTests/ServiceTests.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\ToolTests\ServiceTests.cs" initialLine="36" containingFunctionPresentation="method 'GrpcAccountingClientTest'">
             <startOffsets>
-              <option value="247" />
+              <option value="1058" />
             </startOffsets>
             <endOffsets>
-              <option value="283" />
+              <option value="1059" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Irbis64PlusTests/ConnectionTests.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\Irbis64PlusTests\ConnectionTests.cs" initialLine="24" containingFunctionPresentation="method 'IrbisConnectTest'">
+            <startOffsets>
+              <option value="953" />
+            </startOffsets>
+            <endOffsets>
+              <option value="954" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Irbis64PlusTests/IrbisClientTests.cs</url>
+          <line>11</line>
+          <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\Irbis64PlusTests\IrbisClientTests.cs" initialLine="11" containingFunctionPresentation="method 'GetReaderTest'">
+            <startOffsets>
+              <option value="281" />
+            </startOffsets>
+            <endOffsets>
+              <option value="282" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

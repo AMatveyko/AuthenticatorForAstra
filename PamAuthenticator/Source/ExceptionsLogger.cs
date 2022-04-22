@@ -1,3 +1,4 @@
+using Common;
 using NLog;
 
 namespace PamAuthenticator;
@@ -12,11 +13,12 @@ internal static class ExceptionsLogger
         Logger = LogManager.GetLogger("allExceptions");
     }
     
-    public static void Log(Action action) {
+    public static void Log(Action action, IDebugger debugger) {
         try {
             action();
         }
         catch (Exception e) {
+            debugger.Write(e.GetType().ToString(), e.Message);
             Logger.Error(e.Message, e);
             Console.Write("error");
         }

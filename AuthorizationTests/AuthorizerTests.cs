@@ -1,6 +1,6 @@
+using AccountManagerData.Databases;
 using Authorization.Source.Workers;
 using Common;
-using Common.Db;
 using NUnit.Framework;
 using UserServiceInterface.DTO;
 
@@ -42,8 +42,8 @@ public class AuthorizerTests
         Assert.AreEqual(true, actual.IsError);
     }
 
-    private static Answer GetAuthenticationAnswer(Credentials credentials) {
-        var dataSource = new TestDatabase();
+    private static Result GetAuthenticationAnswer(Credentials credentials) {
+        var dataSource = new TestRepository();
         var authorizer = new Authorizer(dataSource, Secret);
         return authorizer.VerifyingCredentials(credentials);
     }
