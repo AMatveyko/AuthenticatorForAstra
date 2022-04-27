@@ -6,7 +6,7 @@ namespace Common.Configurations;
 
 public abstract class GeneralConfiguration
 {
-    
+    public static string Debug() => GetConfig()["authenticatorSettings:debug"];
     public static string SignatureSecret() =>
         GetConfig()["authenticatorSettings:secret"];
     

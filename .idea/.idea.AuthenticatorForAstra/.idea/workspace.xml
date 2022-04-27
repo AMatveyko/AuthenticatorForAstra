@@ -12,9 +12,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="moved the general configuration to the library">
+    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="rebuild deb packet">
+      <change afterPath="$PROJECT_DIR$/AccountManager/Stuff/Configuration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccountManager/Stuff/Loggers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Configuration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Services/AccountingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Services/AccountingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Services/AuthorizationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Services/AuthorizationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Debugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/Debugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/EmptyDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/EmptyDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/IDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/IDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/SignatureCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/SignatureCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PamAuthenticator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/CredentialsCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/CredentialsCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/AccountWorker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/AccountWorker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/GroupsCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/GroupsCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/DebuggersBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/DebuggersBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/WorkerBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/WorkerBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreationTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreationTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UserCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UserCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +60,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/asneg/source/repos/AuthenticatorForAstra/PamAuthenticator/Source/UnixObjectCreationTemplate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2c779a6718dbdf5eb1db4ddee2bc1429fe8dd9e5d43533b40edae1cdbb3bc0/NLogLoggingConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2c48752f3695ddc89c9c5a4dde497f9258ad2312edadbf33e3555e605a11f04f/FileConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Authorization/Source/Workers/Authorizer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,12 +78,15 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f2db45967b64ca78ecd7a48724f3fba67df7821b2e5c4c2cae1dee78cdd57/GrpcChannel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/nlog.config/4.7.15/contentFiles/any/any/NLog.config" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e9ad9cfd81f949f9890f4766729f41a8c8000/41/e7796889/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/asneg/source/repos/AuthenticatorForAstra/PamAuthenticator/Source/Helpers/CredentialsCreator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf6362724c5d5db05684b97c55b404b9bc353f89c89604f1a28299c5cff/TextReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/asneg/source/repos/AuthenticatorForAstra/PamAuthenticator/Source/UnixObjectCreator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e9ad9cfd81f949f9890f4766729f41a8c8000/cd/5fb75e37/Logger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9af5f84a8561747a6cce84bdc4c6266bc836784bce25212d19e1e5a4a0aa/MD5.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/17.1.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AccountManagerClient/obj/Release/net6.0/AccountingGrpc.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/asneg/source/repos/AuthenticatorForAstra/Common.Configurations/GeneralConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c1dd833e1c3b867920d1248f993b6cc3f4be2881fb202ce7735eccf82fe3/Socket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -328,7 +355,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651071497793</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="rfc">
+      <created>1651071825499</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651071825499</updated>
+    </task>
+    <task id="LOCAL-00016" summary="rebuild deb packet">
+      <created>1651071975160</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1651071975160</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,14 +405,16 @@
     <MESSAGE value="added irbis client. tested all together, works" />
     <MESSAGE value="rfc; add dep packet; rework debugging;" />
     <MESSAGE value="moved the general configuration to the library" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved the general configuration to the library" />
+    <MESSAGE value="rfc" />
+    <MESSAGE value="rebuild deb packet" />
+    <option name="LAST_COMMIT_MESSAGE" value="rebuild deb packet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs</url>
-          <line>16</line>
+          <line>17</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Source\ExceptionsLogger.cs" initialLine="9" containingFunctionPresentation="method 'Log'">
             <startOffsets>
               <option value="-1" />
@@ -397,13 +440,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs</url>
-          <line>12</line>
+          <line>13</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\PamAuthenticator\Source\ExceptionsLogger.cs" initialLine="16" containingFunctionPresentation="method 'Log'">
             <startOffsets>
-              <option value="269" />
+              <option value="293" />
             </startOffsets>
             <endOffsets>
-              <option value="276" />
+              <option value="300" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
@@ -423,26 +466,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ToolTests/ServiceTests.cs</url>
-          <line>27</line>
+          <line>29</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\ToolTests\ServiceTests.cs" initialLine="22" containingFunctionPresentation="method 'GrpcClientTest'">
             <startOffsets>
-              <option value="834" />
+              <option value="835" />
             </startOffsets>
             <endOffsets>
-              <option value="835" />
+              <option value="836" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ToolTests/ServiceTests.cs</url>
-          <line>33</line>
+          <line>35</line>
           <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\ToolTests\ServiceTests.cs" initialLine="36" containingFunctionPresentation="method 'GrpcAccountingClientTest'">
             <startOffsets>
-              <option value="1022" />
+              <option value="1023" />
             </startOffsets>
             <endOffsets>
-              <option value="1023" />
+              <option value="1024" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />

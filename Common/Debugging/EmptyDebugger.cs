@@ -1,4 +1,4 @@
-namespace Common;
+namespace Common.Debugging;
 
 public sealed class EmptyDebugger : IDebugger
 {

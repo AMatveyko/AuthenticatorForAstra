@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Common;
+namespace Common.Debugging;
 
 public sealed class Debugger : IDebugger
 {

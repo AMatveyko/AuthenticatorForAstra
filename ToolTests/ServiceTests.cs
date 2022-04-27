@@ -1,4 +1,5 @@
 using AccountManagerClient;
+using Common.Debugging;
 using NUnit.Framework;
 using PamAuthenticator.DTO;
 using PamAuthenticator.Helpers;
@@ -16,7 +17,8 @@ public sealed class ServiceTests
             Username = "testuser101"
         };
         
-        var credentials = CredentialsCreator.Create(arguments,"123123123", DebuggersBuilder.Create("disable"));
+        var credentials =
+            CredentialsCreator.Create(arguments, "123123123");
 
         // credentials.TimeStamp = "20210415164646";
         

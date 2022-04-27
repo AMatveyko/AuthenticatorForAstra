@@ -17,11 +17,13 @@
     <ItemGroup>
         <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+        <PackageReference Include="NLog" Version="5.0.0-rc2" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\AccountManagerData\AccountManagerData.csproj" />
       <ProjectReference Include="..\Authorization\Authorization.csproj" />
+      <ProjectReference Include="..\Common.Configurations\Common.Configurations.csproj" />
       <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
       <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
     </ItemGroup>

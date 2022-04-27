@@ -1,11 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Common;
+using Common.Debugging;
+using NLog;
 using PamAuthenticator;
 using PamAuthenticator.Helpers;
 
 
-var debugger = DebuggersBuilder.Create(Configuration.Debug());
+var debugger = DebuggersBuilder.Create(Configuration.Debug(), Loggers.Debug().Debug);
 
 var result = ExceptionsLogger.Log( () => Do(debugger), debugger);
 

@@ -2,9 +2,12 @@
 
 using AccountManager;
 using AccountManager.Services;
+using AccountManager.Stuff;
 using AccountManagerData.Databases;
 using Authorization.Source.Workers;
 using Common.Db;
+using Common.Debugging;
+using NLog;
 using UserServiceInterface;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
-    // .AddScoped<IDataSource>( s => new TestRepository())
+    .AddScoped<IDebugger>( s => DebuggersBuilder.Create(Configuration.Debug(), Loggers.Debug().Debug))
     .AddScoped<IDataSource>( s => new IrbisRepository(Configuration.IrbisSettings()))
     .AddScoped<IAuthenticator>( s => new Authorizer(s.GetRequiredService<IDataSource>(), Configuration.SignatureSecret()))
     .AddScoped<IAccounting>( s => new AccountGetter(s.GetRequiredService<IDataSource>(), Configuration.DefaultUserGroup()))

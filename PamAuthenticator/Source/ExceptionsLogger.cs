@@ -1,4 +1,5 @@
 using Common;
+using Common.Debugging;
 using NLog;
 
 namespace PamAuthenticator;
