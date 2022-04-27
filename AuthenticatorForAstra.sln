@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Irbis64PlusTests", "Irbis64
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTest", "ConsoleAppTest\ConsoleAppTest.csproj", "{03C91601-B386-412E-9AF8-980BCAE7AD72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Configurations", "Common.Configurations\Common.Configurations.csproj", "{AF56760C-50D1-409E-9981-CD0A79C3143F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{03C91601-B386-412E-9AF8-980BCAE7AD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C91601-B386-412E-9AF8-980BCAE7AD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03C91601-B386-412E-9AF8-980BCAE7AD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF56760C-50D1-409E-9981-CD0A79C3143F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF56760C-50D1-409E-9981-CD0A79C3143F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF56760C-50D1-409E-9981-CD0A79C3143F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF56760C-50D1-409E-9981-CD0A79C3143F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,5 +131,6 @@ Global
 		{21AFE84F-4E26-4E7C-A836-736DBA5CC3B8} = {E7208134-BCBE-46C6-8F65-A5CED5ABBB9F}
 		{07680E7E-043F-40CB-9BEC-F1DB7E66920E} = {D14A98B9-6CBB-4D2D-8ABF-EAB1A8FC2E58}
 		{03C91601-B386-412E-9AF8-980BCAE7AD72} = {D14A98B9-6CBB-4D2D-8ABF-EAB1A8FC2E58}
+		{AF56760C-50D1-409E-9981-CD0A79C3143F} = {248208B7-D4C1-4F85-BFDD-4BE2C8F19C66}
 	EndGlobalSection
 EndGlobal
