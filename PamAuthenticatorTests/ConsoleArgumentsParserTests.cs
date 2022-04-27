@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using PamAuthenticator;
 using PamAuthenticator.ArgumentsWorkers;
 using PamAuthenticator.DTO;
 
@@ -21,7 +20,7 @@ public sealed class ConsoleArgumentsParserTests
             Password = "administrator"
         };
         
-        var actual = ConsoleArgumentsParser.Parse(consoleArguments);
+        var actual = ArgumentsParser.Parse();
 
         Assert.AreEqual(expected, actual);
 
@@ -34,7 +33,7 @@ public sealed class ConsoleArgumentsParserTests
             "administrator"
         };
 
-        Assert.Catch<ArgumentOutOfRangeException>(() => ConsoleArgumentsParser.Parse(consoleArguments));
+        Assert.Catch<ArgumentOutOfRangeException>(() => ArgumentsParser.Parse());
 
     }
 }

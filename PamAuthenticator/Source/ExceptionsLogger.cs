@@ -8,14 +8,15 @@ internal static class ExceptionsLogger
 
     private static readonly ILogger Logger = Loggers.Exceptions();
 
-    public static void Log(Action action, IDebugger debugger) {
+    public static string Log(Func<string> func, IDebugger debugger) {
         try {
-            action();
+            return func();
         }
         catch (Exception e) {
             debugger.Write(e.GetType().ToString(), e.Message);
             Logger.Error(e, e.Message);
-            Console.Write("error");
+            
+            return MyConstants.Deny;
         }
     }
 }

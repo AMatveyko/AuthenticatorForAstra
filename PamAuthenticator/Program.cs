@@ -1,39 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using AccountManagerClient;
 using Common;
 using PamAuthenticator;
-using PamAuthenticator.ArgumentsWorkers;
 using PamAuthenticator.Helpers;
-using UserServiceInterface.DTO;
-
-var debugger = GetDebugger(args);
-
-ExceptionsLogger.Log(() => Start(args, debugger), debugger);
 
 
-void Start(string[] args, IDebugger debugger) {
+var debugger = DebuggersBuilder.Create(Configuration.Debug());
 
-    var credentials = CreateCredentials(args);
-    
-    
+var result = ExceptionsLogger.Log( () => Do(debugger), debugger);
 
-    var client = new ManagerClient(Configuration.ServiceUrl());
-    var groupCreator = new GroupsCreator(Configuration.GroupsToolPath(), debugger);
-    var userCreator = new UserCreator(Configuration.UsersToolPath(), debugger);
-    var worker = new AccountWorker(credentials, client, groupCreator, userCreator, debugger);
-    worker.Do();
-    
+Environment.Exit( result == MyConstants.Success ? 0 : 1 );
+
+string Do(IDebugger debugger) {
+    var credentials = CredentialsCreator.Create(Configuration.SignatureSecret(), debugger);
+    var timeOut = Configuration.TimeOut();
+    using var worker = WorkerBuilder.Create(credentials, timeOut, debugger);
+
+    return worker.GetResult();
 }
-
-Credentials CreateCredentials(string[] args) {
-    var argument = ConsoleArgumentsParser.Parse(args);
-    ConsoleArgumentsValidator.Validate(argument);
-    var helper = new CredentialsCreator(argument, Configuration.SignatureSecret());
-    return helper.Crete();
-}
-
-IDebugger GetDebugger(params string[] args) =>
-    args.Length == 5 && args[4] == "debug"
-        ? new Debugger(s => Loggers.Debug().Debug(s) )
-        : new EmptyDebugger();

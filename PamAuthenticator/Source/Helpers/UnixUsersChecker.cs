@@ -19,7 +19,7 @@ internal static class UnixUsersChecker
         using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
         using var reader = new StreamReader(fileStream);
 
-        string? line;
+        string line;
         while ( (line = reader.ReadLine() ) != null ) {
             yield return line;
         }

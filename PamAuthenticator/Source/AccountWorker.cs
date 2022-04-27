@@ -6,7 +6,7 @@ using UserServiceInterface.DTO;
 
 namespace PamAuthenticator;
 
-internal sealed class AccountWorker
+internal sealed class AccountWorker : IDisposable
 {
 
     private readonly Credentials _credentials;
@@ -24,13 +24,17 @@ internal sealed class AccountWorker
         (_credentials, _authenticator, _groupsCreator, _userCreator, _debugger)
         = (credentials, authenticator, groupsCreator, userCreator, debugger);
     
-    public void Do() {
+    public string GetResult() {
         TryVerifyCredentials();
         var userData = GetUserData();
         _groupsCreator.CreateIfNeed(userData.Group);
         _userCreator.CreateIfNeed(userData.Name, userData.Group, userData.FullName);
-        Console.Write(MyConstants.Success);
-        _debugger.Write("result",MyConstants.Success);
+
+        var result = MyConstants.Success;
+            
+        _debugger.Write("result", result);
+
+        return result;
     }
 
     private UserData GetUserData() {
@@ -52,4 +56,6 @@ internal sealed class AccountWorker
             throw new AuthenticationException(result.Message);
         }
     }
+
+    public void Dispose() => _authenticator?.Dispose();
 }

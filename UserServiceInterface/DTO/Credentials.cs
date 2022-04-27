@@ -2,7 +2,7 @@ namespace UserServiceInterface.DTO;
 
 public record Credentials
 {
-    public string Username { get; set; }
-    public string PasswordSignature { get; set; }
-    public string TimeStamp { get; set; }
+    public string Username { get; init; }
+    public string PasswordSignature { get; init; }
+    public string TimeStamp { get; init; }
 }
