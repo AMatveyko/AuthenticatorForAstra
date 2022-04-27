@@ -12,14 +12,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Common.Configurations/Common.Configurations.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticatorForAstra.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticatorForAstra.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/PamAuthenticator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/PamAuthenticator.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deb-packets/irbis-authorizer.deb" beforeDir="false" afterPath="$PROJECT_DIR$/deb-packets/irbis-authorizer.deb" afterDir="false" />
+    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="moved the general configuration to the library">
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/CredentialsCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/CredentialsCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650640222948</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="moved the general configuration to the library">
+      <created>1651071497793</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651071497793</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +363,8 @@
     <MESSAGE value="refactoring;&#10;started the implementation of work with the Irbis;" />
     <MESSAGE value="added irbis client. tested all together, works" />
     <MESSAGE value="rfc; add dep packet; rework debugging;" />
-    <option name="LAST_COMMIT_MESSAGE" value="rfc; add dep packet; rework debugging;" />
+    <MESSAGE value="moved the general configuration to the library" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved the general configuration to the library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

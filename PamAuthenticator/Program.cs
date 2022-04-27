@@ -12,7 +12,7 @@ var result = ExceptionsLogger.Log( () => Do(debugger), debugger);
 Environment.Exit( result == MyConstants.Success ? 0 : 1 );
 
 string Do(IDebugger debugger) {
-    var credentials = CredentialsCreator.Create(Configuration.SignatureSecret(), debugger);
+    var credentials = CredentialsCreator.Create(Configuration.SignatureSecret());
     var timeOut = Configuration.TimeOut();
     using var worker = WorkerBuilder.Create(credentials, timeOut, debugger);
 
