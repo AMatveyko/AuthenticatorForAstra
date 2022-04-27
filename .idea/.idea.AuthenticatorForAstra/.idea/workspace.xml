@@ -12,32 +12,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="rebuild deb packet">
-      <change afterPath="$PROJECT_DIR$/AccountManager/Stuff/Configuration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AccountManager/Stuff/Loggers.cs" afterDir="false" />
+    <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/Configuration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/Services/AccountingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Services/AccountingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/Services/AuthorizationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Services/AuthorizationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManager/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AccountManager/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Debugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/Debugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/EmptyDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/EmptyDebugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/IDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/IDebugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/SignatureCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/SignatureCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/AccountWorker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/AccountWorker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/ExceptionsLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/GroupsCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/GroupsCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/DebuggersBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Debugging/DebuggersBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/WorkerBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/WorkerBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreationTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreationTemplate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UnixObjectCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/UserCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/UserCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deb-packets/irbis-authorizer.deb" beforeDir="false" afterPath="$PROJECT_DIR$/deb-packets/irbis-authorizer.deb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +89,7 @@
     <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.PamAuthenticator">
+  <component name="RunManager" selected="Docker.AccountManager">
     <configuration name="ConsoleAppTest" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -148,9 +127,9 @@
       </method>
     </configuration>
     <configuration name="PamAuthenticator" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/PamAuthenticator/bin/Release/net6.0/PamAuthenticator.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PamAuthenticator/bin/Release/net6.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -160,7 +139,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net6.0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -225,6 +204,14 @@
           </option>
           <option name="commandLineOptions" value="--restart always" />
           <option name="sourceFilePath" value="AccountManager/Dockerfile" />
+          <option name="volumeBindings">
+            <list>
+              <DockerVolumeBindingImpl>
+                <option name="containerPath" value="/var/log" />
+                <option name="hostPath" value="/var/log/irbis-authorizer" />
+              </DockerVolumeBindingImpl>
+            </list>
+          </option>
         </settings>
       </deployment>
       <method v="2" />
@@ -369,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651071975160</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added debug services">
+      <created>1651075805986</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1651075805986</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +401,8 @@
     <MESSAGE value="moved the general configuration to the library" />
     <MESSAGE value="rfc" />
     <MESSAGE value="rebuild deb packet" />
-    <option name="LAST_COMMIT_MESSAGE" value="rebuild deb packet" />
+    <MESSAGE value="added debug services" />
+    <option name="LAST_COMMIT_MESSAGE" value="added debug services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

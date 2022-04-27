@@ -9,6 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["AccountManager/AccountManager.csproj", "AccountManager/"]
 COPY ["Common.Db/Common.Db.csproj", "Common.Db/"]
+COPY ["Common.Configurations/Common.Configurations.csproj", "Common.Configurations/"]
 COPY ["Authorization/Authorization.csproj", "Authorization/"]
 COPY ["UserServiceInterface/UserServiceInterface.csproj", "UserServiceInterface/"]
 COPY ["Common/Common.csproj", "Common/"]
