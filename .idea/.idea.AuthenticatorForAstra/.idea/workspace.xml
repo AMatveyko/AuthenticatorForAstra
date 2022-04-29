@@ -13,34 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AccountManager/Middleware/PasswordChecker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AccountManager/Stuff/ApplicationPassword.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AccountManager/Stuff/ApplicationSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AccountManagerClient/AccountManagerClientRequirements.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/Source/Helpers/SignatureValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Authorization/Source/Workers/Authenticator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile_3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PamAuthenticator/Source/DTO/AuthenticatorSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccountManagerData/Source/Databases/CachedIrbisRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common.Cache/Cache.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common.Cache/CacheWithTimer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common.Cache/ICache.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AccountManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/Stuff/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Stuff/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManagerClient/AccountManagerClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerClient/AccountManagerClient.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManagerClient/ManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerClient/ManagerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization/Source/Workers/Authorizer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorizationTests/AuthorizationTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationTests/AuthorizationTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorizationTests/AuthorizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationTests/AuthorizerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Configurations/GeneralConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Irbis64PlusTests/Irbis64PlusTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Irbis64PlusTests/Irbis64PlusTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/WorkerBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/Source/Helpers/WorkerBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticator/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticator/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PamAuthenticatorTests/PamAuthenticatorTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PamAuthenticatorTests/PamAuthenticatorTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ToolTests/ServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToolTests/ToolTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ToolTests/ToolTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deb-packets/irbis-authorizer.deb" beforeDir="false" afterPath="$PROJECT_DIR$/deb-packets/irbis-authorizer.deb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountManagerData/AccountManagerData.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerData/AccountManagerData.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticatorForAstra.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticatorForAstra.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +249,8 @@
       <workItem from="1650981701251" duration="16781000" />
       <workItem from="1651167110719" duration="5514000" />
       <workItem from="1651172698489" duration="1753000" />
-      <workItem from="1651223751455" duration="4130000" />
+      <workItem from="1651223751455" duration="8032000" />
+      <workItem from="1651240372933" duration="6639000" />
     </task>
     <task id="LOCAL-00001" summary="change projects">
       <created>1649578188248</created>
@@ -396,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651079836480</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added service authentication; config refactoring;">
+      <created>1651233097776</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1651233097776</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +425,8 @@
     <MESSAGE value="rebuild deb packet" />
     <MESSAGE value="added debug services" />
     <MESSAGE value="correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction" />
+    <MESSAGE value="added service authentication; config refactoring;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added service authentication; config refactoring;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,5 +537,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Common.Cache.Cache`2" memberName="_cache" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

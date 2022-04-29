@@ -6,9 +6,10 @@ using AccountManager.Stuff;
 using AccountManagerData.Databases;
 using Authorization.Source.Helpers;
 using Authorization.Source.Workers;
+using Common.Cache;
 using Common.Db;
+using Common.Db.Entities;
 using Common.Debugging;
-using NLog;
 using UserServiceInterface;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,10 +22,12 @@ var builder = WebApplication.CreateBuilder(args);
 var settings = new Configuration().GetSettings();
 
 builder.Services
-    .AddSingleton( s => new SignatureValidator(settings.SignatureSecret))
-    .AddScoped( s => DebuggersBuilder.Create(settings.Debug, Loggers.Debug().Debug))
     .AddSingleton( s => new ApplicationPassword(settings.ApplicationPassword))
-    .AddScoped<IDataSource>( s => new IrbisRepository(settings.IrbisSettings))
+    .AddSingleton( s => new SignatureValidator(settings.SignatureSecret))
+    .AddScoped<ICache<string,User>>( s => new CacheWithTimer<string, User>(TimeSpan.FromSeconds(30)))
+    .AddScoped( s => DebuggersBuilder.Create(settings.Debug, Loggers.Debug().Debug))
+    .AddScoped( s => new IrbisRepository(settings.IrbisSettings))
+    .AddScoped<IDataSource>(s => new CachedIrbisRepository(s.GetService<IrbisRepository>(), s.GetService<ICache<string,User>>()))
     .AddScoped<IAuthenticator>( s => new Authenticator(s.GetRequiredService<IDataSource>(), s.GetService<SignatureValidator>() ?? throw new Exception("not created SignatureValidator")))
     .AddScoped<IAccounting>( s => new AccountGetter(s.GetRequiredService<IDataSource>(), settings.DefaultUserGroup))
     .AddGrpc();

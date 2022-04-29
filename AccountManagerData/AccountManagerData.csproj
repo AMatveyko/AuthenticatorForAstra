@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Common.Cache\Common.Cache.csproj" />
       <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
       <ProjectReference Include="..\Irbis64Plus\Irbis64Plus.csproj" />
     </ItemGroup>

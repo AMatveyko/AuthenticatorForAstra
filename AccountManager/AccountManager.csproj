@@ -23,6 +23,7 @@
     <ItemGroup>
       <ProjectReference Include="..\AccountManagerData\AccountManagerData.csproj" />
       <ProjectReference Include="..\Authorization\Authorization.csproj" />
+      <ProjectReference Include="..\Common.Cache\Common.Cache.csproj" />
       <ProjectReference Include="..\Common.Configurations\Common.Configurations.csproj" />
       <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
       <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
