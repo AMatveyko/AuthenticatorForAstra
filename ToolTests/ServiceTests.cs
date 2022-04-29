@@ -33,8 +33,19 @@ public sealed class ServiceTests
     public void GrpcAccountingClientTest() {
         var client = CreateClient();
         var result = new[] {"administrator", "005569"}.Select(client.GetUser).ToList();
+        foreach (var user in result) {
+            Console.WriteLine($"{user.IsError} {user.Message}");
+        }
     }
-    
-    private static ManagerClient CreateClient() => new ("http://10.0.0.155:5005/", 10);
+
+    private static ManagerClient CreateClient() {
+        var requirements = new AccountManagerClientRequirements {
+            Url = "http://10.0.0.106:5005/",
+            Password = "testPassword",
+            Secret = "123123123",
+            TimeOut = 10
+        };
+        return new ManagerClient(requirements);
+    }
     // private static ManagerClient CreateClient() => new ("http://10.0.0.106:5005/");
 }

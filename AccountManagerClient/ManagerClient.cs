@@ -1,4 +1,5 @@
 using AccountManager;
+using Common;
 using Common.DTO;
 using Grpc.Core;
 using Grpc.Net.Client;
@@ -11,13 +12,22 @@ public sealed class ManagerClient : IUserAuthenticator
 {
 
     private readonly GrpcChannel _channel;
+    private readonly Metadata _headers;
     private readonly int _timeOut;
 
-    public ManagerClient(string url, int timeOut) {
-        ValidateTimeOut(timeOut);
-        ( _channel, _timeOut ) = ( GrpcChannel.ForAddress(url), timeOut );
+    public ManagerClient(AccountManagerClientRequirements requirements) {
+        ValidateTimeOut(requirements.TimeOut);
+        ( _channel, _headers, _timeOut ) = ( GrpcChannel.ForAddress(requirements.Url), new Metadata(), requirements.TimeOut );
+        SetHeaders(requirements.Password, requirements.Secret);
     }
 
+    private void SetHeaders(string password, string secret) {
+        var timestamp = TimeStampHelper.GetTimeStamp();
+        var signatureInfo = SignatureCreator.Create(password, secret, timestamp);
+        _headers.Add("authorization", signatureInfo.Signature);
+        _headers.Add("timestamp", signatureInfo.TimeStamp);
+    } 
+    
     public Result VerifyingCredentials(Credentials credentials) {
         var request = new CredentialsGrpc {
             PasswordSignature = credentials.PasswordSignature,
@@ -59,7 +69,7 @@ public sealed class ManagerClient : IUserAuthenticator
         return func(request ,options).GetAwaiter().GetResult();
     }
     private DateTime GetDeadLine() => DateTime.UtcNow.AddSeconds(_timeOut);
-    private CallOptions GetOptions() => new (deadline: GetDeadLine());
+    private CallOptions GetOptions() => new (deadline: GetDeadLine(), headers: _headers);
 
     private static void ValidateTimeOut(int timeOut) {
         if (timeOut is < 1 or > 60) {

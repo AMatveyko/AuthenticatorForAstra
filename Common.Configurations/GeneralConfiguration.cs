@@ -4,15 +4,17 @@ using NLog.Extensions.Logging;
 
 namespace Common.Configurations;
 
-public abstract class GeneralConfiguration
+public abstract class GeneralConfiguration<T>
 {
-    public static string Debug() => GetConfig()["authenticatorSettings:debug"];
-    public static string SignatureSecret() =>
-        GetConfig()["authenticatorSettings:secret"];
+    public abstract T GetSettings();
+    protected static string Password(IConfiguration config) => config["authenticatorSettings:password"];
+    protected static string Debug(IConfiguration config) => config["authenticatorSettings:debug"];
+    protected static string SignatureSecret(IConfiguration config) =>
+        config["authenticatorSettings:secret"];
     
     public static NLogLoggingConfiguration GetNlogConfig() {
-        var config = GetConfig().GetSection("NLog");
-        var nlogConfig = new NLogLoggingConfiguration(config);
+        var nlogSection = GetConfig().GetSection("NLog");
+        var nlogConfig = new NLogLoggingConfiguration(nlogSection);
         return nlogConfig;
     }
 

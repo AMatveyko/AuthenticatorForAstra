@@ -1,21 +1,27 @@
 using Common.Configurations;
+using Microsoft.Extensions.Configuration;
+using PamAuthenticator.DTO;
 
 namespace PamAuthenticator;
 
-internal abstract class Configuration : GeneralConfiguration
+internal sealed class Configuration : GeneralConfiguration<AuthenticatorSettings>
 {
-    public static string GroupsToolPath() => GetConfig()["authenticatorSettings:groupsToolPath"];
-    public static string UsersToolPath() => GetConfig()["authenticatorSettings:usersToolPath"];
+    private static string GroupsToolPath(IConfiguration config) => config["authenticatorSettings:groupsToolPath"];
+    private static string UsersToolPath(IConfiguration config) => config["authenticatorSettings:usersToolPath"];
+    private static string TimeOut(IConfiguration config) => config["authenticatorSettings:timeOut"];
+    private static string ServiceUrl(IConfiguration config) =>
+        config["authenticatorSettings:accountManagerUrl"];
 
-    public static int TimeOut() {
-        var timeOutString = GetConfig()["authenticatorSettings:timeOut"];
-        if (int.TryParse(timeOutString, out var timeOut)) {
-            return timeOut;
-        }
-
-        throw new ArgumentException("Timeout is not a number.");
+    public override AuthenticatorSettings GetSettings() {
+        var config = GetConfig();
+        return new() {
+            ApplicationPassword = Password(config),
+            Debug = Debug(config),
+            GroupsToolPath = GroupsToolPath(config),
+            ServiceUrl = ServiceUrl(config),
+            SignatureSecret = SignatureSecret(config),
+            TimeOut = TimeOut(config),
+            UsersToolPath = UsersToolPath(config)
+        };
     }
-
-    public static string ServiceUrl() =>
-        GetConfig()["authenticatorSettings:accountManagerUrl"];
 }
