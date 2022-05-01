@@ -13,15 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe61f4f-3178-40f3-b11c-eb8687598bd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AccountManagerData/Source/Databases/CachedIrbisRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Cache/Cache.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Cache/CacheWithTimer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Cache/ICache.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccountManager/BackgroundServices/CacheHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AccountManagerData/Source/UserCache.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AuthenticatorForAstra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/AccountManager.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AccountManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManager/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountManagerData/AccountManagerData.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AccountManagerData/AccountManagerData.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticatorForAstra.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticatorForAstra.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common.Cache/CacheWithTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Cache/CacheWithTimer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/AccountManagerClient/obj/Release/net6.0/AccountingGrpc.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c1dd833e1c3b867920d1248f993b6cc3f4be2881fb202ce7735eccf82fe3/Socket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a3e639d94986eddab1a9a78d348cfaa4f59bc1e3a8cbc3bd46e01ed6f2/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -250,7 +247,9 @@
       <workItem from="1651167110719" duration="5514000" />
       <workItem from="1651172698489" duration="1753000" />
       <workItem from="1651223751455" duration="8032000" />
-      <workItem from="1651240372933" duration="6639000" />
+      <workItem from="1651240372933" duration="6869000" />
+      <workItem from="1651393102254" duration="569000" />
+      <workItem from="1651393934599" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="change projects">
       <created>1649578188248</created>
@@ -385,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651233097776</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added cache">
+      <created>1651247847841</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1651247847841</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +432,8 @@
     <MESSAGE value="added debug services" />
     <MESSAGE value="correction" />
     <MESSAGE value="added service authentication; config refactoring;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added service authentication; config refactoring;" />
+    <MESSAGE value="added cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -534,6 +541,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Common.Cache/CacheWithTimer.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\asneg\source\repos\AuthenticatorForAstra\Common.Cache\CacheWithTimer.cs" initialLine="21" containingFunctionPresentation="method 'RefreshValueIfNeed'">
+            <startOffsets>
+              <option value="715" />
+            </startOffsets>
+            <endOffsets>
+              <option value="745" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

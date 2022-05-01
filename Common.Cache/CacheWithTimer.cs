@@ -1,13 +1,13 @@
 namespace Common.Cache;
 
-public sealed class CacheWithTimer<TK, TV> : ICache<TK, TV>, ICache where TK : notnull
+public class CacheWithTimer<TK, TV> : ICache<TK, TV>, ICache where TK : notnull
 {
     private static readonly object LockFlag = new();
-    private readonly TimeSpan _limit;
+    private readonly TimeSpan _period;
     private static readonly Dictionary<TK, TV> Cache = new();
     private static readonly Dictionary<TK, DateTime> Times = new();
 
-    public CacheWithTimer(TimeSpan limit) => _limit = limit;
+    public CacheWithTimer(TimeSpan period) => _period = period;
 
 
     public TV GetValue(TK key, Func<TK, TV> valueGetter) {
@@ -38,5 +38,5 @@ public sealed class CacheWithTimer<TK, TV> : ICache<TK, TV>, ICache where TK : n
         }
     }
 
-    private bool IsStale(TK key) => Times[key].AddSeconds(_limit.Seconds) < DateTime.UtcNow;
+    private bool IsStale(TK key) => Times[key].AddSeconds(_period.Seconds) < DateTime.UtcNow;
 }

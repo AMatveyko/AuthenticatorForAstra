@@ -1,8 +1,10 @@
 // using AccountManager.Services;
 
+using AccountManager.BackgroundServices;
 using AccountManager.Middleware;
 using AccountManager.Services;
 using AccountManager.Stuff;
+using AccountManagerData;
 using AccountManagerData.Databases;
 using Authorization.Source.Helpers;
 using Authorization.Source.Workers;
@@ -22,9 +24,12 @@ var builder = WebApplication.CreateBuilder(args);
 var settings = new Configuration().GetSettings();
 
 builder.Services
+    .AddHostedService( s => new CacheHandler(s.GetService<ICache>(), TimeSpan.FromMinutes(1)))
+    .AddSingleton(s => new UserCache(TimeSpan.FromSeconds(30)))
+    .AddSingleton<ICache<string,User>>( s => s.GetService<UserCache>())
+    .AddSingleton<ICache>(s => s.GetService<UserCache>())
     .AddSingleton( s => new ApplicationPassword(settings.ApplicationPassword))
     .AddSingleton( s => new SignatureValidator(settings.SignatureSecret))
-    .AddScoped<ICache<string,User>>( s => new CacheWithTimer<string, User>(TimeSpan.FromSeconds(30)))
     .AddScoped( s => DebuggersBuilder.Create(settings.Debug, Loggers.Debug().Debug))
     .AddScoped( s => new IrbisRepository(settings.IrbisSettings))
     .AddScoped<IDataSource>(s => new CachedIrbisRepository(s.GetService<IrbisRepository>(), s.GetService<ICache<string,User>>()))
