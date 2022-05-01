@@ -24,8 +24,8 @@ var builder = WebApplication.CreateBuilder(args);
 var settings = new Configuration().GetSettings();
 
 builder.Services
-    .AddHostedService( s => new CacheHandler(s.GetService<ICache>(), TimeSpan.FromMinutes(1)))
-    .AddSingleton(s => new UserCache(TimeSpan.FromSeconds(30)))
+    .AddHostedService( s => new CacheHandler(s.GetService<ICache>(), TimeSpan.FromMinutes(5)))
+    .AddSingleton(s => new UserCache(TimeSpan.FromSeconds(10)))
     .AddSingleton<ICache<string,User>>( s => s.GetService<UserCache>())
     .AddSingleton<ICache>(s => s.GetService<UserCache>())
     .AddSingleton( s => new ApplicationPassword(settings.ApplicationPassword))
