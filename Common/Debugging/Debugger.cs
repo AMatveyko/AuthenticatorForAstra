@@ -1,20 +1,21 @@
 using System.Text;
 
-namespace Common;
+namespace Common.Debugging;
 
 public sealed class Debugger : IDebugger
 {
 
-    private readonly string _debugFile;
+    private readonly Action<string> _write;
 
-    public Debugger(string debugFile) {
-        _debugFile = debugFile;
+    public Debugger(Action<string> write) {
+        _write = write;
         Write(nameof(Debugger),"Start");
     }
     
     public void Write(string initiator, params string[] messages) {
         var debugInfo = new StringBuilder($"{DateTime.Now} {initiator}:");
-        debugInfo.AppendLine( $" {string.Join("|", messages)}" );
-        File.AppendAllText(_debugFile, debugInfo.ToString());
+        debugInfo.Append( $" {string.Join("|", messages)}" );
+        
+        _write(debugInfo.ToString());
     }
 }

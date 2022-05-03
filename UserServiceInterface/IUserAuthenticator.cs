@@ -1,6 +1,6 @@
 namespace UserServiceInterface;
 
-public interface IUserAuthenticator : IAuthenticator, IAccounting
+public interface IUserAuthenticator : IAuthenticator, IAccounting, IDisposable
 {
     
 }

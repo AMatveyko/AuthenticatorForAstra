@@ -4,10 +4,10 @@ namespace PamAuthenticator.DTO;
 
 internal record Arguments : IValidatableObject
 {
-    public string AuthenticationType { get; set; }
-    public string PamType { get; set; }
-    public string Username { get; set; }
-    public string Password { get; set; }
+    public string AuthenticationType { get; init; }
+    public string PamType { get; init; }
+    public string Username { get; init; }
+    public string Password { get; init; }
     
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
 

@@ -1,4 +1,5 @@
 using Common;
+using Common.Debugging;
 using NLog;
 
 namespace PamAuthenticator;
@@ -6,21 +7,17 @@ namespace PamAuthenticator;
 internal static class ExceptionsLogger
 {
 
-    private static readonly Logger Logger;
-    
-    static ExceptionsLogger() {
-        LogManager.Configuration = Configuration.GetNlogConfig();
-        Logger = LogManager.GetLogger("allExceptions");
-    }
-    
-    public static void Log(Action action, IDebugger debugger) {
+    private static readonly ILogger Logger = Loggers.Exceptions();
+
+    public static string Log(Func<string> func, IDebugger debugger) {
         try {
-            action();
+            return func();
         }
         catch (Exception e) {
             debugger.Write(e.GetType().ToString(), e.Message);
-            Logger.Error(e.Message, e);
-            Console.Write("error");
+            Logger.Error(e, e.Message);
+            
+            return MyConstants.Deny;
         }
     }
 }

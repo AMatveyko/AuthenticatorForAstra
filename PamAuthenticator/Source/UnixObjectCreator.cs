@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Common;
+using Common.Debugging;
 
 namespace PamAuthenticator;
 

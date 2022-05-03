@@ -1,4 +1,5 @@
 using AccountManagerData.Databases;
+using Authorization.Source.Helpers;
 using Authorization.Source.Workers;
 using Common;
 using NUnit.Framework;
@@ -44,7 +45,7 @@ public class AuthorizerTests
 
     private static Result GetAuthenticationAnswer(Credentials credentials) {
         var dataSource = new TestRepository();
-        var authorizer = new Authorizer(dataSource, Secret);
+        var authorizer = new Authenticator(dataSource, new SignatureValidator(Secret));
         return authorizer.VerifyingCredentials(credentials);
     }
     

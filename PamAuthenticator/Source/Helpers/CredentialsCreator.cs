@@ -1,24 +1,30 @@
 using Common;
+using PamAuthenticator.ArgumentsWorkers;
 using PamAuthenticator.DTO;
 using UserServiceInterface.DTO;
 
 namespace PamAuthenticator.Helpers;
 
-internal sealed class CredentialsCreator
+internal static class CredentialsCreator
 {
-    private readonly Arguments _arguments;
-    private readonly string _secret;
+    public static Credentials Create(string secret) {
+        var arguments = GetAndValidateArguments();
+        return Create(arguments, secret);
+    }
 
-    public CredentialsCreator(Arguments arguments, string secret) =>
-        (_arguments, _secret) = (arguments, secret);
-
-    public Credentials Crete() {
+    public static Credentials Create(Arguments arguments, string secret) {
         var timestamp = TimeStampHelper.GetTimeStamp();
-        var signatureInfo = SignatureCreator.Create(_arguments.Password, _secret, timestamp);
+        var signatureInfo = SignatureCreator.Create(arguments.Password, secret, timestamp);
         return new() {
-            Username = _arguments.Username,
+            Username = arguments.Username,
             PasswordSignature = signatureInfo.Signature,
             TimeStamp = signatureInfo.TimeStamp
         };
+    }
+    
+    private static Arguments GetAndValidateArguments() {
+        var argument = ArgumentsParser.Parse();
+        ConsoleArgumentsValidator.Validate(argument);
+        return argument;
     }
 }

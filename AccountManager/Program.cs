@@ -1,10 +1,17 @@
 // using AccountManager.Services;
 
-using AccountManager;
+using AccountManager.BackgroundServices;
+using AccountManager.Middleware;
 using AccountManager.Services;
+using AccountManager.Stuff;
+using AccountManagerData;
 using AccountManagerData.Databases;
+using Authorization.Source.Helpers;
 using Authorization.Source.Workers;
+using Common.Cache;
 using Common.Db;
+using Common.Db.Entities;
+using Common.Debugging;
 using UserServiceInterface;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,16 +20,27 @@ var builder = WebApplication.CreateBuilder(args);
 // For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
 
 // Add services to the container.
+
+var settings = new Configuration().GetSettings();
+
 builder.Services
-    // .AddScoped<IDataSource>( s => new TestRepository())
-    .AddScoped<IDataSource>( s => new IrbisRepository(Configuration.IrbisSettings()))
-    .AddScoped<IAuthenticator>( s => new Authorizer(s.GetRequiredService<IDataSource>(), Configuration.SignatureSecret()))
-    .AddScoped<IAccounting>( s => new AccountGetter(s.GetRequiredService<IDataSource>(), Configuration.DefaultUserGroup()))
+    .AddHostedService( s => new CacheHandler(s.GetService<ICache>(), TimeSpan.FromMinutes(5)))
+    .AddSingleton(s => new UserCache(TimeSpan.FromSeconds(10)))
+    .AddSingleton<ICache<string,User>>( s => s.GetService<UserCache>())
+    .AddSingleton<ICache>(s => s.GetService<UserCache>())
+    .AddSingleton( s => new ApplicationPassword(settings.ApplicationPassword))
+    .AddSingleton( s => new SignatureValidator(settings.SignatureSecret))
+    .AddScoped( s => DebuggersBuilder.Create(settings.Debug, Loggers.Debug().Debug))
+    .AddScoped( s => new IrbisRepository(settings.IrbisSettings))
+    .AddScoped<IDataSource>(s => new CachedIrbisRepository(s.GetService<IrbisRepository>(), s.GetService<ICache<string,User>>()))
+    .AddScoped<IAuthenticator>( s => new Authenticator(s.GetRequiredService<IDataSource>(), s.GetService<SignatureValidator>() ?? throw new Exception("not created SignatureValidator")))
+    .AddScoped<IAccounting>( s => new AccountGetter(s.GetRequiredService<IDataSource>(), settings.DefaultUserGroup))
     .AddGrpc();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<PasswordChecker>();
 app.MapGrpcService<AuthorizationService>();
 app.MapGrpcService<AccountingService>();
 app.MapGet("/",

@@ -4,18 +4,18 @@ namespace Irbis64Plus.Internal;
 
 internal record Response
 {
-    public string Command { get; set; }
-    public string Guid { get; set; }
-    public string Seq { get; set; }
-    public string ReservStr4 { get; set; }
-    public string ReservStr5 { get; set; }
-    public string ReservStr6 { get; set; }
-    public string ReservStr7 { get; set; }
-    public string ReservStr8 { get; set; }
-    public string ReservStr9 { get; set; }
-    public string ReservStr10 { get; set; }
-    public string Error { get; set; }
-    public List<string> Data { get; set; }
+    public string Command { get; init; }
+    public string Guid { get; init; }
+    public string Seq { get; init; }
+    public string ReservStr4 { get; init; }
+    public string ReservStr5 { get; init; }
+    public string ReservStr6 { get; init; }
+    public string ReservStr7 { get; init; }
+    public string ReservStr8 { get; init; }
+    public string ReservStr9 { get; init; }
+    public string ReservStr10 { get; init; }
+    public string Error { get; init; }
+    public List<string> Data { get; init; }
 
     public override string ToString()
     {

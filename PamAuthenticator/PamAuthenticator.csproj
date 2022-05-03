@@ -4,8 +4,8 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccountManagerClient\AccountManagerClient.csproj" />
+    <ProjectReference Include="..\Common.Configurations\Common.Configurations.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
   </ItemGroup>

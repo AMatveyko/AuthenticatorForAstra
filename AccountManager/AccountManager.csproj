@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
+        <Nullable>disable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>AccountManager</RootNamespace>
         <UserSecretsId>7d700f25-c6df-4c89-97a4-b328a0b043d5</UserSecretsId>
@@ -15,13 +15,16 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.46.0-pre1" />
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+        <PackageReference Include="NLog" Version="5.0.0-rc2" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\AccountManagerData\AccountManagerData.csproj" />
       <ProjectReference Include="..\Authorization\Authorization.csproj" />
+      <ProjectReference Include="..\Common.Cache\Common.Cache.csproj" />
+      <ProjectReference Include="..\Common.Configurations\Common.Configurations.csproj" />
       <ProjectReference Include="..\Common.Db\Common.Db.csproj" />
       <ProjectReference Include="..\UserServiceInterface\UserServiceInterface.csproj" />
     </ItemGroup>

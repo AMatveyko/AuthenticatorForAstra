@@ -1,11 +1,12 @@
 using System.Security.Cryptography;
 using System.Text;
+using Common.Debugging;
 
 namespace Common;
 
 public static class SignatureCreator
 {
-    public static SignatureInfo Create(string value, string secret, string timeStamp) {
+    public static SignatureInfo Create(string value, string secret, string timeStamp, IDebugger debugger = null) {
         var rawSignature = CreateRawSignature(value, secret, timeStamp);
         var hash = CreateHash(rawSignature);
         return new() {Signature = hash, TimeStamp = timeStamp};
